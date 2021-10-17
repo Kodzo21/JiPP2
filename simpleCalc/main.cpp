@@ -34,8 +34,8 @@ int main(int argc, char *argv[]){
         result = substractNum(a,b);
     }else if (choice == "volume"){
         argError(argc, 4);
-        int a = stoi(argv[2]);
-        int b = stoi(argv[3]);
+        a = stoi(argv[2]);
+        b = stoi(argv[3]);
         result = volumeNum(a,b);
     }else if(choice == "help") {
         argError(argc, 2);
