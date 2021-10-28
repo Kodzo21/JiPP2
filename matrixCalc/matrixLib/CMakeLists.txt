@@ -7,4 +7,4 @@ include_directories(include)
 
 # Dodajemy pliki, które mają byc kompilowane
 # STATIC - biblioteka będzie statyczna
-add_library(matrixCalcLib STATIC src/lib.cpp)
+add_library(matrixLib STATIC src/lib.cpp)

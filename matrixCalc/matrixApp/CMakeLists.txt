@@ -9,4 +9,4 @@ include_directories(../matrixLib/include)
 add_executable(matrixApp main.cpp)
 
 # Załączamy do naszej aplikacji biblioteki. Musi to być po add_executable
-target_link_libraries(matrixApp matrixCalcLib)
+target_link_libraries(matrixApp matrixLib)
