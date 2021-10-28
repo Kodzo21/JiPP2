@@ -113,7 +113,10 @@ int main(int argc, char *argv[]) {
                 cout << "Podaj wartosc potegi: " << endl;
                 if(!(cin >> power)) badInput();
                 iResultMatrix = powerMatrix(iMatrixA, rowsA, columnsA, power);
-            } else iResultMatrix = transpozeMatrix(iMatrixA, rowsA, columnsA);
+            } else {
+                if(rowsA != columnsA)  H::swap(rowsA,columnsA);
+                iResultMatrix = transpozeMatrix(iMatrixA, rowsA, columnsA);
+            }
 
             printResult(iResultMatrix, rowsA, columnsA);
             deleteMatrix(iMatrixA, rowsA);
@@ -132,7 +135,10 @@ int main(int argc, char *argv[]) {
                 cout << "Podaj wartosc potegi: " << endl;
                 if(!(cin >> power)) badInput();
                 dbResultMatrix = powerMatrix(dbMatrixA, rowsA, columnsA, power);
-            } else dbResultMatrix = transpozeMatrix(dbMatrixA, rowsA, columnsA);
+            } else {
+                if(rowsA != columnsA)  H::swap(rowsA,columnsA);
+                dbResultMatrix = transpozeMatrix(dbMatrixA, rowsA, columnsA);
+            }
 
             printResult(dbResultMatrix, rowsA, columnsA);
             deleteMatrix(dbMatrixA, rowsA);

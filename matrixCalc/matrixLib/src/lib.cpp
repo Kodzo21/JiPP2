@@ -161,8 +161,8 @@ double **multiplyByScalar(double **matrix, int rows, int columns, double scalar)
  */
 int **transpozeMatrix(int **matrix, int rows, int columns) {
     int **transposedMatrix = allocateIntegerMatrix(rows, columns);
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < columns; ++j) {
+    for (int i = 0; i < columns; ++i) {
+        for (int j = 0; j < rows; ++j) {
             transposedMatrix[j][i] = matrix[i][j];
         }
     }
@@ -178,8 +178,8 @@ int **transpozeMatrix(int **matrix, int rows, int columns) {
  */
 double **transpozeMatrix(double **matrix, int rows, int columns) {
     double **transposedMatrix = allocateDoubleMatrix(rows, columns);
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < columns; ++j) {
+    for (int i = 0; i < columns; ++i) {
+        for (int j = 0; j < rows; ++j) {
             transposedMatrix[j][i] = matrix[i][j];
         }
     }
