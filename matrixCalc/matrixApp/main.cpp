@@ -191,7 +191,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 /**
- * Wyrzuca error
+ * Wyswietla komunikat bledu
  */
 void badInput(){
     cout << "Blad przy wczytywaniu wartosci" << endl;
@@ -215,7 +215,7 @@ void readMatrixSize(int &rows, int &columns) {
  * @param columns liczba kolumn
  */
 void readMatrixElements(int **matrix, int rows, int columns) {
-    cout << "Elementy podawane wierszami (np: 2 4 6)" << endl;
+    cout << "Podaj elementy macierzy wierszami (np: 2 4 6)" << endl;
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < columns; ++j) {
             if(!(cin >> matrix[i][j])) badInput();
