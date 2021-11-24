@@ -15,3 +15,7 @@ add_subdirectory(lab5/Examples)
 add_subdirectory(lab5/Pojazd)
 
 add_subdirectory(lab6/Wektory)
+
+add_subdirectory(lab7/Dziedziczenie)
+
+add_subdirectory(lab7/Polimorfizm)
