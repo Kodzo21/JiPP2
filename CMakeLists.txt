@@ -19,3 +19,17 @@ add_subdirectory(lab6/Wektory)
 add_subdirectory(lab7/Dziedziczenie)
 
 add_subdirectory(lab7/Polimorfizm)
+
+add_subdirectory(Notes)
+
+add_subdirectory(lab9/1)
+
+add_subdirectory(lab9/2)
+
+add_subdirectory(lab12/matrixTest)
+
+add_subdirectory(lab12/extern)
+
+add_subdirectory(lab12/withoutExtern)
+
+add_subdirectory(FinalProject)
