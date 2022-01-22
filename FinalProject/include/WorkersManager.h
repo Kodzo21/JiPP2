@@ -14,7 +14,7 @@ using namespace std;
 
 class WorkersManager {
 private:
-    vector<Worker> workers;
+    vector<Worker*> workers;
     fstream dataBase;
     int workersAmount=0;
     double genderRatio=0;
@@ -22,16 +22,16 @@ private:
 public:
     WorkersManager();
 
-    void printWorkersList();
-    void addWorker(Worker worker);
-    void addWorker(Worker worker,string position);
-    void fireWorker(int index);
-    void editWorker(int index);
-    void findWorker(string name);
-    void promoteEmployee(int index);
-    void demoteManager(int index);
-    void updateData();
-    void showStats();
+//    void printWorkersList();
+//    void addWorker(Worker *worker);
+//    void addWorker(Worker *worker,string position);
+//    void fireWorker(int index);
+//    void editWorker(int index);
+//    void findWorker(string name);
+//    void promoteEmployee(int index);
+//    void demoteManager(int index);
+//    void updateData();
+//    void showStats();
 };
 
 

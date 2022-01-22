@@ -18,8 +18,7 @@ protected:
     string country;
     int salary;
 public:
-    Worker();
-    ~Worker();
+
     virtual void printData()=0;
 };
 

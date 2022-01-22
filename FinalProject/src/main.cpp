@@ -1,5 +1,7 @@
 #include <iostream>
-
+#include <WorkersManager.h>
+#include <Worker.h>
+#include<Employee.h>
 /*
 lista :
 wskaźniki
@@ -20,7 +22,7 @@ obsługę błędów
 using namespace std;
 
 int main(){
-
+WorkersManager workersManager;
 
 
     return 0;

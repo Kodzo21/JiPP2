@@ -19,16 +19,6 @@ WorkersManager::WorkersManager() {
             else worker = new Employee(name, surname, age, gender, position, salary, country);
 
             workers.emplace_back(worker);
-            delete worker;
     }
-}
-
-
-void WorkersManager::printWorkersList() {
-
-
-}
-
-void WorkersManager::addWorker(Worker worker) {
-
+    file.close();
 }

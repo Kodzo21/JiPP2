@@ -3,7 +3,7 @@
 #include "Employee.h"
 
 
-Employee::Employee(string name, string surname, int age, string gender,string position, int salary, string country,) : position(position) {
+Employee::Employee(string name, string surname, int age, string gender,string position, int salary, string country) : position(position) {
     this->name = name;
     this->surname = surname;
     this->age=age;
