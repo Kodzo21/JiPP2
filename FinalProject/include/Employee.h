@@ -12,10 +12,36 @@ using namespace std;
 class Employee : public Worker {
 private:
     string position;
+
 public:
-    Employee(string name, string surname, int age,string gender, string position, int salary, string country);
+    Employee(string name, string surname, int age, string position, int salary, string country);
 
     void printData() override;
+
+    const string &getPosition() const ;
+
+    const string &getName() const override;
+
+    const string &getSurname() const override;
+
+
+    const string &getCountry() const override;
+
+    int getAge() const override;
+
+    int getSalary() const override;
+
+    void setName(const string &name) override;
+
+    void setSurname(const string &surname) override;
+
+    void setAge(int age) override;
+
+    void setCountry(const string &country) override;
+
+    void setSalary(int salary) override;
+
+    void setPosition(const string &position) override;
 };
 
 

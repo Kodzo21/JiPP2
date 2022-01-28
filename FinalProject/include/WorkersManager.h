@@ -17,21 +17,22 @@ private:
     vector<Worker*> workers;
     fstream dataBase;
     int workersAmount=0;
-    double genderRatio=0;
     double averageSalary=0;
 public:
     WorkersManager();
 
-//    void printWorkersList();
-//    void addWorker(Worker *worker);
-//    void addWorker(Worker *worker,string position);
-//    void fireWorker(int index);
-//    void editWorker(int index);
-//    void findWorker(string name);
-//    void promoteEmployee(int index);
-//    void demoteManager(int index);
-//    void updateData();
-//    void showStats();
+    int getWorkersAmount() const;
+
+    void printWorkersList();
+    void addWorker(Worker *worker);
+    void addWorker(Worker *worker,string position);
+    void fireWorker(int index);
+    void editWorker(int index);
+    void findWorkerByName(string name);
+    void promoteEmployee(int index);
+    void demoteManager(int index);
+    void updateData();
+    void showStats();
 };
 
 
