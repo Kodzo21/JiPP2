@@ -8,4 +8,4 @@ add_executable(FinalProject
         src/main.cpp
         src/Employee.cpp
         src/Manager.cpp
-        src/WorkersManager.cpp )
+        src/WorkersManager.cpp src/MainFunctions.cpp)
