@@ -1,6 +1,4 @@
-//
-// Created by rycze on 21.01.2022.
-//
+
 
 #ifndef JIPP2_EMPLOYEE_H
 #define JIPP2_EMPLOYEE_H
@@ -14,11 +12,13 @@ private:
     string position;
 
 public:
-    Employee(string name, string surname, int age, string position, int salary, string country);
+    Employee(string &name, string &surname, int &age, string &position, int &salary, string &country);
+
+    //~Employee() override = default;
 
     void printData() override;
 
-    const string &getPosition() const ;
+    const string &getPosition() const override;
 
     const string &getName() const override;
 

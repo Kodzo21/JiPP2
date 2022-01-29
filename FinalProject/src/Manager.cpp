@@ -1,11 +1,8 @@
-//
-// Created by rycze on 21.01.2022.
-//
 
 #include "Manager.h"
 
 
-Manager::Manager(string name,string surname,int age, int salary, string country) {
+Manager::Manager(string &name, string &surname, int &age, int &salary, string &country) {
     this->name = name;
     this->surname = surname;
     this->age = age;
@@ -14,8 +11,9 @@ Manager::Manager(string name,string surname,int age, int salary, string country)
 }
 
 void Manager::printData() {
-    cout<<"Imie i nazwisko:"<<name<<" "<<surname<<" Wiek:"<<age<<" Stanowisko:"<<position<<" Wynagrodzenie:"
-    <<salary<<" Kraj:"<<country<<endl;
+    cout << "Imie i nazwisko:" << name << " " << surname << " Wiek:" << age << " Stanowisko:" << position
+         << " Wynagrodzenie:"
+         << salary << " Kraj:" << country << endl;
 }
 
 

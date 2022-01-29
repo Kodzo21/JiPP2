@@ -15,17 +15,15 @@ using namespace std;
 class WorkersManager {
 private:
     vector<Worker*> workers;
-    fstream dataBase;
     int workersAmount=0;
     double averageSalary=0;
 public:
     WorkersManager();
-
+    ~WorkersManager();
     int getWorkersAmount() const;
 
     void printWorkersList();
     void addWorker(Worker *worker);
-    void addWorker(Worker *worker,string position);
     void fireWorker(int index);
     void editWorker(int index);
     void findWorkerByName(string name);
@@ -33,7 +31,7 @@ public:
     void demoteManager(int index);
     void updateData();
     void showStats();
+    friend ostream& operator<<(ostream& os, const WorkersManager &workersManager);
 };
-
 
 #endif //JIPP2_WORKERSMANAGER_H

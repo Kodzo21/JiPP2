@@ -1,9 +1,8 @@
 
-
 #include "Employee.h"
 
 
-Employee::Employee(string name, string surname, int age,string position, int salary, string country) : position(position) {
+Employee::Employee(string &name, string &surname, int &age,string &position, int &salary, string &country) : position(position) {
     this->name = name;
     this->surname = surname;
     this->age=age;
@@ -66,6 +65,7 @@ void Employee::setSalary(int salary) {
 void Employee::setPosition(const string &position) {
     this->position = position;
 }
+
 
 
 

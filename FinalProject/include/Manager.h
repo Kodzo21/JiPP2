@@ -1,20 +1,22 @@
 
 #ifndef JIPP2_MANAGER_H
 #define JIPP2_MANAGER_H
+
 #include "Worker.h"
 #include <iostream>
 
 using namespace std;
 
-class Manager : public Worker{
+class Manager : public Worker {
 private:
-    string position ="Manager";
+    string position = "Manager";
 
 public:
-    Manager(string name,string surname,int age,int salary,string country);
+    Manager(string &name, string &surname, int &age, int &salary, string &country);
+
+   // ~Manager() override = default;
 
     void printData() override;
-
 
     const string &getName() const override;
 
