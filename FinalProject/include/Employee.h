@@ -6,15 +6,26 @@
 
 #include "Worker.h"
 #include <iostream>
+
 using namespace std;
+
 class Employee : public Worker {
 private:
     string position;
 
 public:
+    /**
+     * Konstuktor obiektu typu Employee
+     * @param name imie
+     * @param surname nazwisko
+     * @param age wiek
+     * @param position stanowisko
+     * @param salary wynagrodzenie
+     * @param country kraj
+     */
     Employee(string &name, string &surname, int &age, string &position, int &salary, string &country);
 
-    //~Employee() override = default;
+    ~Employee() override = default;
 
     void printData() override;
 

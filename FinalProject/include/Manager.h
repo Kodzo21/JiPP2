@@ -12,9 +12,17 @@ private:
     string position = "Manager";
 
 public:
+    /**
+     * Konstruktor obiektu Manager
+     * @param name imie
+     * @param surname nazwisko
+     * @param age wiek
+     * @param salary wynagrodzenie
+     * @param country kraj
+     */
     Manager(string &name, string &surname, int &age, int &salary, string &country);
 
-   // ~Manager() override = default;
+    ~Manager() override = default;
 
     void printData() override;
 

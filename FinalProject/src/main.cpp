@@ -8,14 +8,14 @@ wskaźniki - git
 klasy - git
 dziedziczenie - git
 polimorfizm - git
-szablon -nie ma
+szablon - git
 przeciążanie metod - git
 przeciążanie operatorów -git
 konstruktory, destruktory - troche juz git
 kontenery - git
 „bazę danych” - plik też jest bazą danych - git
-parametry wywoływania programu - nie ma
-obsługę błędów - nie ma
+parametry wywoływania programu - git
+obsługę błędów - git
 */
 using namespace std;
 
@@ -25,6 +25,7 @@ enum menuOptions {
     ADD_WORKER,
     FIRE_WORKER,
     EDIT_WORKER,
+    FIND,
     PROMOTE,
     DEMOTE,
     SHOW_STATS,
@@ -56,6 +57,7 @@ int main(int argc, char **argv) {
     } else cout << "Podano prawidlowa liczbe - program uruchomiony" << endl;
 
     int choice, workerChoice, index;
+    string name;
     WorkersManager *workersManager = new WorkersManager();
     while (true) {
         cout << "Wybierz opcje" << endl;
@@ -64,19 +66,24 @@ int main(int argc, char **argv) {
         cout << "2 - Dodaj pracownika" << endl;
         cout << "3 - Zwolnij pracownika" << endl;
         cout << "4 - Edytuj pracownika" << endl;
-        cout << "5 - Awansuj pracownika" << endl;
-        cout << "6 - Zdegraduj pracownika" << endl;
-        cout << "7 - Wyswietl statystyki" << endl;
-        cin >> choice;
+        cout << "5 - Wyszukaj pracownika" << endl;
+        cout << "6 - Awansuj pracownika" << endl;
+        cout << "7 - Zdegraduj pracownika" << endl;
+        cout << "8 - Wyswietl statystyki" << endl;
+        cinInput(choice);
 
         switch (choice) {
 
             case EXIT: {
                 ofstream dataBase;
                 dataBase.open("dataBase.txt");
-                dataBase << *workersManager;
-                dataBase.close();
-
+                if (dataBase.is_open()) {
+                    dataBase << *workersManager;
+                    dataBase.close();
+                } else {
+                    cout << "Blad otwarcia pliku" << endl;
+                    exit(1);
+                }
                 delete workersManager;
                 return 0;
             }
@@ -90,7 +97,7 @@ int main(int argc, char **argv) {
                 cout << "Kogo chcesz dodac??" << endl;
                 cout << "1 - Manager" << endl;
                 cout << "2 - Inny pracownik" << endl;
-                cin >> workerChoice;
+                cinInput(workerChoice);
                 if (workerChoice == 1) {
                     Worker *worker = createManager();
                     workersManager->addWorker(worker);
@@ -104,27 +111,32 @@ int main(int argc, char **argv) {
 
             case FIRE_WORKER: {
                 cout << "Podaj nr pracownika do zwolnienia:";
-                cin >> index;
+                cinInput(index);
                 workersManager->fireWorker(index);
-                cout << "Pracownik zostal zwolniony";
                 break;
             }
 
             case EDIT_WORKER: {
                 cout << "Podaj nr pracownika, ktorego chcesz edytowac" << endl;
-                cin >> index;
+                cinInput(index);
                 workersManager->editWorker(index);
+                break;
+            }
+            case FIND:{
+                cout<<"Podaj imie:";
+                cinInput(name);
+                workersManager->findWorkerByName(name);
                 break;
             }
             case PROMOTE: {
                 cout << "Podaj nr pracownika, ktorego chcesz awansowac" << endl;
-                cin >> index;
+                cinInput(index);
                 workersManager->promoteEmployee(index);
                 break;
             }
             case DEMOTE: {
                 cout << "Podaj nr managera, ktorego chcesz zdegradowac" << endl;
-                cin >> index;
+                cinInput(index);
                 workersManager->demoteManager(index);
                 break;
             }

@@ -2,19 +2,20 @@
 #include "Employee.h"
 
 
-Employee::Employee(string &name, string &surname, int &age,string &position, int &salary, string &country) : position(position) {
+Employee::Employee(string &name, string &surname, int &age, string &position, int &salary, string &country) : position(
+        position) {
     this->name = name;
     this->surname = surname;
-    this->age=age;
+    this->age = age;
     this->salary = salary;
     this->country = country;
 
 }
 
 void Employee::printData() {
-    cout<<"Imie i nazwisko:"<<name<<" "<<surname<<" Wiek:"
-    <<age<<" Stanowisko:"<<position<<" Wynagrodzenie:"
-        <<salary<<" Kraj:"<<country<<endl;
+    cout << "Imie i nazwisko:" << name << " " << surname << " Wiek:"
+         << age << " Stanowisko:" << position << " Wynagrodzenie:"
+         << salary << " Kraj:" << country << endl;
 }
 
 

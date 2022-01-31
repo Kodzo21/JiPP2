@@ -4,17 +4,17 @@ Worker *createEmployee() {
     string name, surname, country, position;
     int age, salary;
     cout << "Podaj imie:";
-    cin >> name;
+    cinInput(name);
     cout << "Podaj nazwisko:";
-    cin >> surname;
+    cinInput(surname);
     cout << "Podaj wiek:";
-    cin >> age;
+    cinInput(age);
     cout << "Podaj nazwe stanowiska:";
-    cin >> position;
+    cinInput(position);
     cout << "Podaj wysokosc wynagrodzenia:";
-    cin >> salary;
+    cinInput(salary);
     cout << "Podaj kraj pochodzenia";
-    cin >> country;
+    cinInput(country);
     Worker *worker = new Employee(name, surname, age, position, salary, country);
     return worker;
 }
@@ -23,15 +23,17 @@ Worker *createManager() {
     string name, surname, country;
     int age, salary;
     cout << "Podaj imie:";
-    cin >> name;
+    cinInput(name);
     cout << "Podaj nazwisko:";
-    cin >> surname;
+    cinInput(surname);
     cout << "Podaj wiek:";
-    cin >> age;
+    cinInput(age);
     cout << "Podaj wysokosc wynagrodzenia:";
-    cin >> salary;
-    cout << "Podaj kraj pochodzenia";
-    cin >> country;
+    cinInput(salary);
+    cout << "Podaj kraj pochodzenia:";
+    cinInput(country);
     Worker *worker = new Manager(name, surname, age, salary, country);
     return worker;
 }
+
+
